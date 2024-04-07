@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class ConvertirCelsiusAFahrenheit {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la temperatura en grados Celsius: ");
+        double temperaturaCelsius = scanner.nextDouble();
+
+        double temperaturaFahrenheit = (temperaturaCelsius * 1.8) + 32;
+
+        System.out.println("La temperatura en grados Fahrenheit es: " + temperaturaFahrenheit);
+    }
+}
