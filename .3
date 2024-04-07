@@ -5,29 +5,29 @@ public class NotaMinimaTercerCorte {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Constantes
-        final double VALOR_MINIMO_APROBACION = 3.0;
-        final double PORCENTAJE_PRIMER_CORTE = 0.2;
-        final double PORCENTAJE_SEGUNDO_CORTE = 0.2;
-        final double PORCENTAJE_TERCER_CORTE = 0.6;
+        
+        final double VALORMINIMOAPROBACION = 3.0;
+        final double PORCENTAJEPRIMERCORTE = 0.2;
+        final double PORCENTAJESEGUNDOCORTE = 0.2;
+        final double PORCENTAJETERCERCORTE = 0.6;
 
-        // Ingreso de notas por teclado
+        
         System.out.print("Ingrese la nota del primer corte: ");
         double notaPrimerCorte = scanner.nextDouble();
         System.out.print("Ingrese la nota del segundo corte: ");
         double notaSegundoCorte = scanner.nextDouble();
 
-        // Cálculo de la nota mínima en el tercer corte
-        double notaMinimaTercerCorte = (VALOR_MINIMO_APROBACION - (notaPrimerCorte * PORCENTAJE_PRIMER_CORTE) - (notaSegundoCorte * PORCENTAJE_SEGUNDO_CORTE)) / PORCENTAJE_TERCER_CORTE;
+        
+        double notaMinimaTercerCorte = (VALOR_MINIMO_APROBACION - (notaPrimerCorte * PORCENTAJEPRIMERCORTE) - (notaSegundoCorte * PORCENTAJESEGUNDOCORTE)) / PORCENTAJETERCERCORTE;
 
-        // Impresión del resultado
+    
         System.out.println("La nota mínima que debes sacar en el tercer corte para aprobar la asignatura es: " + notaMinimaTercerCorte);
 
-        // Mensaje de aprobación o no
+        
         if (notaMinimaTercerCorte <= 5.0) {
-            System.out.println("¡Puedes aprobar la asignatura!");
+            System.out.println("aprobaste la asignatura");
         } else {
-            System.out.println("Lo siento, no puedes aprobar la asignatura con las notas actuales.");
+            System.out.println("No puedes aprobar la asignatura con las notas actuales");
         }
     }
 }
